@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url('../fonts/ArchivoNarrow-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url('../fonts/ArchivoNarrow-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url('../fonts/ArchivoNarrow-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url('../fonts/ArchivoNarrow-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  src: url('../fonts/ArchivoNarrow-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans:
+    'Roboto', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-heading:
+    'Archivo Narrow', ui-sans-serif, system-ui, sans-serif;
+  --font-elegant:
+    'Playfair Display', ui-serif, Georgia, serif;
+
+  --color-primary-50: #eaf6f7;
+  --color-primary-100: #cfeaec;
+  --color-primary-200: #9fd5d9;
+  --color-primary-300: #69bcc2;
+  --color-primary-400: #34a3ab;
+  --color-primary-500: #10939b;
+  --color-primary-600: #0f6971;
+  --color-primary-700: #0c545a;
+  --color-primary-800: #072e33;
+  --color-primary-900: #05161a;
+  --color-primary: #10939b;
+  --color-primary-hover: #0f6971;
+
+  --color-cream: #fcf8f5;
+  --color-cream-alt: #f6f2e9;
+  --color-app-bg: #f7f8f7;
+
+  --color-ink: #2b2b2b;
+  --color-ink-muted: #6b6b6b;
+  --color-ink-soft: #94958f;
+
+  --color-danger: #c0392b;
+  --color-danger-tint: #fbeae7;
+}
+
+@layer base {
+  body {
+    @apply bg-app-bg text-ink font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading font-bold text-ink;
+  }
+}
+
+@layer components {
+  .btn-primary,
+  .btn-outline,
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-extrabold
+      transition-all duration-150 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white shadow-sm shadow-primary/20 hover:bg-primary-hover
+      hover:shadow-md hover:shadow-primary/25 active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply border border-ink/10 bg-white text-ink hover:border-primary hover:text-primary;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-ink-muted hover:bg-ink/5 hover:text-ink;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink/[0.06] bg-white p-6 shadow-sm shadow-ink/[0.03];
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full bg-primary-50 px-3 py-1 text-xs font-bold
+      text-primary-600;
+  }
+
+  .badge-muted {
+    @apply bg-ink/[0.06] text-ink-muted;
+  }
+
+  .field {
+    @apply flex flex-col gap-1.5 text-left;
+  }
+
+  .field label {
+    @apply text-sm font-bold text-ink;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    @apply w-full rounded-xl border border-ink/10 bg-white px-4 py-2.5 text-sm text-ink outline-none
+      transition-colors focus:border-primary;
+  }
+
+  .field-error {
+    @apply text-sm font-medium text-danger;
+  }
+}
