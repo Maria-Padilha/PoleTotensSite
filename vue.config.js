@@ -3,7 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   chainWebpack: (config) => {
     config.plugin('html').tap((args) => {
-      args[0].title = 'Pole Totens — Totens interativos para eventos'
+      args[0].title = 'Pole Eventos'
       return args
     })
   },
