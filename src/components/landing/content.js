@@ -6,6 +6,8 @@ import {
   Gift,
   Layers,
   Mic,
+  Timer,
+  Crosshair,
   Trophy,
   Users,
   Palette,
@@ -66,6 +68,20 @@ export const games = [
     icon: Mic,
     tagline: 'Letra palavra por palavra',
     text: 'Letra sincronizada, nota pela voz e pelo ritmo, ranking por apresentação e replay de quem cantou.',
+  },
+  {
+    slug: 'acerte-o-tempo',
+    name: 'Acerte o Tempo',
+    icon: Timer,
+    tagline: 'Pare o cronômetro no instante certo',
+    text: 'Um tempo é sorteado e o cronômetro roda, até sumir da tela. Quem parar mais perto do alvo sobe no ranking, e cravar na mosca vira festa.',
+  },
+  {
+    slug: 'pare-no-alvo',
+    name: 'Pare no Alvo',
+    icon: Crosshair,
+    tagline: 'Reflexo, mira e muita tensão',
+    text: 'Uma barra vai e volta: toque para parar dentro da zona. A cada acerto a zona encolhe e a barra acelera. Rápido, viciante e fácil de entender.',
   },
 ]
 

@@ -21,7 +21,7 @@
       <div class="mt-24 max-w-2xl">
         <p v-reveal class="text-sm font-extrabold uppercase tracking-[0.22em] text-primary-500">Os jogos</p>
         <h2 v-reveal="{ delay: 80 }" class="mt-3 font-elegant text-4xl leading-tight sm:text-5xl">
-          Sete jogos para <em class="text-primary-500">cada tipo de evento</em>
+          Nove jogos para <em class="text-primary-500">cada tipo de evento</em>
         </h2>
         <p v-reveal="{ delay: 160 }" class="mt-4 text-lg text-ink-muted">
           Escolha um ou combine vários no mesmo totem. Cada um é montado com o conteúdo e a identidade visual do seu
@@ -53,7 +53,7 @@
 
         <article
           v-reveal
-          class="flex flex-col justify-between rounded-3xl bg-primary-900 p-7 text-white sm:col-span-2 lg:col-span-1"
+          class="flex flex-col justify-between gap-6 rounded-3xl bg-primary-900 p-7 text-white sm:col-span-2 lg:col-span-3 lg:flex-row lg:items-center"
         >
           <div>
             <Sparkles :size="28" class="text-amber-300" />
@@ -64,7 +64,7 @@
           </div>
           <a
             href="#orcamento"
-            class="mt-6 inline-flex items-center gap-2 self-start rounded-full bg-white px-5 py-2.5 text-sm font-extrabold text-primary-800"
+            class="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-white px-5 py-2.5 text-sm font-extrabold text-primary-800 lg:self-center"
             @click.prevent="scrollToQuote"
           >
             Falar com a gente <ArrowRight :size="16" />
